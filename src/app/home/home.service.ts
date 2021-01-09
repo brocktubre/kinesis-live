@@ -14,9 +14,6 @@ export class HomeService {
   }
 
   public streamData(region: string, secretAccessKey: string, accessKey: string, streamName: string ): Observable<String>{
-    accessKey = 'AKIA42GNCNT5RE37DGBL'
-    secretAccessKey = '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'
-    debugger;
     const sendResult = new Subject<String>();
     AWS.config.update({region: region,
       accessKeyId: accessKey,
