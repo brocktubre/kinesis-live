@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   public someError: boolean;
   public someErrorMessage: String;
   public sampleRecord: String;
+  public samplePolicy: String;
 
   public loadingSub;
 
@@ -37,6 +38,17 @@ export class HomeComponent implements OnInit {
                           '\t"order_id":"dc2d7929-d80a-4c57-8303-29dae371b9a9",\n' +
                           '\t"total_cost":128.74\n' +
                         '}';
+    this.samplePolicy = '{\n'+
+                        '\t"Version": "2012-10-17",\n'+
+                        '\t"Statement": [\n' +
+                        '\t\t{\n' +
+                                '\t\t\t"Sid": "VisualEditor0",\n' +
+                                '\t\t\t"Effect": "Allow",\n' +
+                                '\t\t\t"Action": "kinesis:PutRecord",\n' +
+                                '\t\t\t"Resource": "arn:aws:kinesis:<REGION>:<ACCOUNT_ID>:stream/<STREAM_NAME>"\n' +
+                        '\t\t}\n' +
+                      '\t]\n' +
+                    '}\n'
   }
 
   public startStream() {
