@@ -12,5 +12,5 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws --region us-east-1 s3 sync ./dist/ s3://kinesis.live-angular-code/ --acl=public-read --delete
+      - aws --region us-east-1 s3 sync ./dist/kinesis-live-angular-app/ s3://kinesis.live-angular-code/ --acl=public-read --delete
       - aws --region us-east-1 cloudfront create-invalidation --distribution-id E2KI8O216GDNVS --paths '/*'
