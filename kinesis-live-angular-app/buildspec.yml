@@ -5,6 +5,7 @@ phases:
   install:
     commands:
       - printenv
+      - cd kinesis-live-angular-app
       - rm -rf package-lock.json node_modules
       - npm cache verify
       - npm install
