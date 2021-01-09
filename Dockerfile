@@ -11,4 +11,4 @@ RUN npm install -g @angular/cli
 WORKDIR /home/kinesis-live-angular-app
 
 # docker image build -t kinesis-live-image .
-# docker run -p 4200:4200 -v /Users/brocktubre/Projects/kinesis.live/kinesis-live-angular-app:/home/kinesis-live-angular-app -it kinesis-angular
+# docker run -p 4200:4200 -v /Users/brocktubre/Projects/kinesis.live/:/home/kinesis-live-angular-app -it kinesis-angular

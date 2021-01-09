@@ -11,7 +11,7 @@
           <div *ngIf="someError"  class="text-center">
             <span class="alert alert-danger col-md-12">{{someErrorMessage}}</span>
           </div>
-          <div class="row k-input"><input autofocus class="form-control" type="text" value="" placeholder="Kinesis Stream Name" #streamName /></div>
+          <div class="row k-input"><input autofocus disabled class="form-control" type="text" value="" placeholder="Kinesis Stream Name" #streamName /></div>
           <div class="row k-input"><input autofocus class="form-control" type="text" value="" placeholder="AWS Region" #region /></div>
           <div class="row k-input"><input autofocus class="form-control" type="text" value="" placeholder="Access Key" #accessKey /></div>
           <div class="row k-input"><input autofocus class="form-control" type="text" value="" placeholder="Secret Access Key" #secretAccessKey /></div>
