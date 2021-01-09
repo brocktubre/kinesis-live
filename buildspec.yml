@@ -1,0 +1,17 @@
+
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - printenv
+      - rm -rf package-lock.json node_modules
+      - npm cache verify
+      - npm install
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - aws --region us-east-2 s3 sync ./dist/app s3://kinesis.live-angular-code/ --acl=public-read --delete
+      - aws --region us-east-2 cloudfront create-invalidation --distribution-id E2KI8O216GDNVS --paths '/*'

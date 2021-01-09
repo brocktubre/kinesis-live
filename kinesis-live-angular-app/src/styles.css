@@ -1,0 +1,25 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.fas {
+	padding: 0 10px 0 10px;
+}
+
+.background{
+	min-width: 100%;
+}
+
+.background {
+    padding-bottom: 50px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+  
+.info-item {
+padding: 15px;
+}
+  
+.k-input {
+padding-top: 25px;
+}
