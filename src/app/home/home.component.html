@@ -14,13 +14,14 @@
         </div>
         <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 text-center" style="padding-top: 20px;">
           <p class="text-danger" style="font-size: 100px;"><i class="fas fa-exclamation-triangle" style="padding: 0;"></i></p>
-          <h3>IMPORTANT! Read this before you begin.</h3>
-          <p>1. Make sure the stream name you provide actually exists!</p>
-          <p>2. Make sure the role associated with the access key and secret access key have permission to call the PutRecord policy on the Kinesis Stream.</p>
-          <p>3. Happy streaming!</p>
+          <h3>IMPORTANT!<br>Read before you begin.</h3>
+          <p class="text-justify">1. Make sure the stream name you provide actually exists!</p>
+          <p class="text-justify">2. Make sure the role associated with the access key and secret access key have permission to call the PutRecord policy on the Kinesis Stream.</p>
+          <p class="text-justify">3. Happy streaming!</p>
         </div>
         <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 form-group" style="padding-top: 20px">
           <p class="text-success text-center" style="font-size: 100px;"><i class="fas fa-thumbs-up" style="padding: 0;"></i></p>
+          <h3 class="text-center">Start streaming here. Enter the following information.</h3>
           <div *ngIf="someError"  class="text-center">
             <span class="alert alert-danger col-md-12">{{someErrorMessage}}</span>
           </div>

@@ -1,5 +1,7 @@
 # Kinesis.Live Codebase
 
+[View Kinesis.Live here](https://kinesis.live)
+
 This is a simple application that allows users to easily stream data in Kinesis. Just choose the type of data you want to send, enter in some information about your stream, your AWS account, and start streaming some sample data.
 
 Leave an [issue here](https://github.com/brocktubre/kinesis-live/issues) if you find an issue or have a suggestion for the app.

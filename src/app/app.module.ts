@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterTailComponent } from './footer/footer-tail/footer-tail.component';
+import { DonateComponent } from './donate/donate.component';
+import { CompleteComponent } from './donate/complete/complete.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FooterTailComponent } from './footer/footer-tail/footer-tail.component'
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    FooterTailComponent
+    FooterTailComponent,
+    DonateComponent,
+    CompleteComponent
   ],
   imports: [
     BrowserModule,
