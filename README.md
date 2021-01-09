@@ -30,15 +30,15 @@ To run the Angular application locally, navigate inside the site directory and u
 The application framework used is Angular and the AWS Node.js SDK is used to make API calls to Kinesis and your AWS account.
 
 ## Use CodeBuild and CodePipeline
-This app is hosted as a static website on Amazon S3. Once code is pushed into the `main` branch on Github, it triggers a CodePipeline event that triggers a CodeBuild. The code build runs a container that installs the `node_modules`, builds the app using `ng build --prod --aot --build-optimizer`, and sends the packaged Angular app to S3 (where is it hosted from).
+This app is hosted as a static website on Amazon S3. Once code is pushed into the `main` branch on Github, it triggers a CodePipeline event that triggers a CodeBuild. The code build runs a container that installs the `node_modules`, builds the app using `ng build --prod --aot --build-optimizer`, and sends the packaged Angular app to S3 (where is it hosted from). Check out the `buildspec.yml` file to see the phases during the build and S# sync process.s
 
 ## CloudFront and S3
-The Angular app is build to a distribute single page static website and hosted on Amazon S3. CloudFront is used as a content distribution network to delivery the Kinesis.Live all over the globe.
+The Angular app is built to distribute single page static website hosted on Amazon S3. CloudFront is used as a content distribution network to delivery the Kinesis.Live all over the globe.
 
 ## Route 53 as DNS Resolver
 Route 53 is used to host the application. A simple A record is created to point the Route 53 public hosted zone of `kinesis.live` to the CloudFront distribution hosting the S3 static website. 
 
-Copyright 2021 [Brock Tubre](https://brocktubre)
+Copyright 2021 [Brock Tubre](https://brocktubre.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
