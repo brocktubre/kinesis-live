@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { FooterTailComponent } from './footer-tail/footer-tail.component';
+import { FooterTailComponent } from './footer/footer-tail/footer-tail.component';
 
 @NgModule({
   declarations: [

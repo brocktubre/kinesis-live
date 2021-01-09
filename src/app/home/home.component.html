@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>  
+<app-navbar></app-navbar>
   <!-- Content for the main page -->
   <div class="container-fluid background" style="padding: 0;" >
     <div class="container">
@@ -6,6 +6,11 @@
           <img src='assets/img/kinesis_icon.png' style="max-width: 100px; padding-bottom: 10px;"/>
           <h3>Start streaming data with Kinesis.Live!</h3>
           <p>Enter in your the following in formation below to start streaming data into your Kinesis Data Stream or Firehose Delivery Stream.</p>
+          <br/>
+          <h4>Sample Record</h4>
+          <span class="text-justify">
+              <pre>{{sampleRecord}}</pre>
+          </span>
         </div>
         <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 text-center" style="padding-top: 20px;">
           <p class="text-danger" style="font-size: 100px;"><i class="fas fa-exclamation-triangle" style="padding: 0;"></i></p>
@@ -15,6 +20,7 @@
           <p>3. Happy streaming!</p>
         </div>
         <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 form-group" style="padding-top: 20px">
+          <p class="text-success text-center" style="font-size: 100px;"><i class="fas fa-thumbs-up" style="padding: 0;"></i></p>
           <div *ngIf="someError"  class="text-center">
             <span class="alert alert-danger col-md-12">{{someErrorMessage}}</span>
           </div>
@@ -41,7 +47,6 @@
         </div>
       <app-footer></app-footer>
   </div>
-
-  <app-footer-tail></app-footer-tail>
   <!-- [END] Footer Container -->
 </div>
+<app-footer-tail></app-footer-tail>

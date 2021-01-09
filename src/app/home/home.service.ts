@@ -9,8 +9,8 @@ import * as uuid from 'uuid';
 export class HomeService {
 
 
-  constructor() { 
-    
+  constructor() {
+
   }
 
   public streamData(region: string, secretAccessKey: string, accessKey: string, streamName: string ): Observable<String>{
@@ -27,10 +27,10 @@ export class HomeService {
     for(let i = 0; i < Math.floor(Math.random() * 5) + 1; i++){
       items.push(this.grocery_items[Math.floor(Math.random() * this.grocery_items.length) - 1])
     }
-    
+
     order["items"] = items;
     order["order_id"] = order_id;
-    order["total_cost"] = ((Math.random() * 199.99) + 1.00).toFixed(2)
+    order["total_cost"] = Number(((Math.random() * 199.99) + 1.00).toFixed(2))
 
     var payload = JSON.stringify(order);
 
@@ -39,16 +39,17 @@ export class HomeService {
       PartitionKey: order_id,
       StreamName: streamName,
     };
-    console.log(payload);
+    console.log("Payload being send the Kinesis Stream named %s: %s", streamName, payload);
 
     kds.putRecord(params, function(err, data) {
       if (err) {
+        debugger;
         sendResult.error(err);
       }else {
         sendResult.next(payload);
       }
     });
-      return sendResult.asObservable(); 
+      return sendResult.asObservable();
   }
 
   private grocery_items = ['tropical fruit', 'whole milk', 'pip fruit', 'other vegetables',
