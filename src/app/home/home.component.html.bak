@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+  <!-- Content for the main page -->
+  <div class="container-fluid background" style="padding: 0;" >
+    <div class="container">
+        <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 text-center" style="padding-top: 50px;">
+          <img src='assets/img/kinesis_icon.png' style="max-width: 100px; padding-bottom: 10px;"/>
+          <h3>Start streaming data with Kinesis.Live!</h3>
+          <p>Enter in your the following in formation below to start streaming data into your Kinesis Data Stream or Firehose Delivery Stream.</p>
+          <br/>
+          <h4>Sample Record</h4>
+          <span class="text-justify">
+              <pre>{{sampleRecord}}</pre>
+          </span>
+        </div>
+        <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 text-center" style="padding-top: 20px;">
+          <p class="text-danger" style="font-size: 100px;"><i class="fas fa-exclamation-triangle" style="padding: 0;"></i></p>
+          <h3>IMPORTANT!<br>Read before you begin.</h3>
+          <p class="text-justify">1. Make sure the stream name you provide actually exists!</p>
+          <p class="text-justify">2. Make sure the role associated with the access key and secret access key have permission to call the PutRecord policy on the Kinesis Stream. See the example policy below.</p>
+          <h4>Sample Policy</h4>
+          <span class="text-justify">
+              <pre>{{samplePolicy}}</pre>
+          </span>
+        </div>
+        <div class="container col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xs-12 form-group" style="padding-top: 20px">
+          <p class="text-success text-center" style="font-size: 100px;"><i class="fas fa-thumbs-up" style="padding: 0;"></i></p>
+          <h3 class="text-center">Start streaming here. Enter the following information.</h3>
+          <div *ngIf="someError"  class="text-center">
+            <span class="alert alert-danger col-md-12">{{someErrorMessage}}</span>
+          </div>
+          <div class="row k-input"><input autofocus class="form-control" type="text" value="" placeholder="Kinesis Stream Name" #streamName /></div>
+          <div class="row k-input"><input class="form-control" type="text" value="" placeholder="AWS Region" #region /></div>
+          <div class="row k-input"><input class="form-control" type="text" value="" placeholder="Access Key" #accessKey /></div>
+          <div class="row k-input"><input class="form-control" type="text" value="" placeholder="Secret Access Key" #secretAccessKey /></div>
+          <div *ngIf="!isLoadingData" class="row k-input" >
+            <button class="btn btn-success form-control" style="margin-top: 20px;" (click)="startStream()"> Start Streaming Data </button>
+          </div>
+          <div *ngIf="isLoadingData" class="text-center" style="margin-top: 20px;">
+            <i class="fas fa-spinner fa-spin" style="font-size:50px"></i>
+          </div>
+          <div  *ngIf="isLoadingData" class="row k-input">
+            <button class="btn btn-danger form-control" style="margin-top: 20px;" (click)="stopStream()"> Stop Streaming Data </button>
+          </div>
+        </div>
+        <div class="container col-md-12 col-sm-12 text-center" style="padding-top: 50px;">
+            <div *ngIf="isLoadingData">
+              <code>
+                  <h3 class="text-dark">{{streamingData}}</h3>
+              </code>
+            </div>
+        </div>
+      <app-footer></app-footer>
+  </div>
+  <!-- [END] Footer Container -->
+</div>
+<app-footer-tail></app-footer-tail>
+<span id="footer-content"></span>

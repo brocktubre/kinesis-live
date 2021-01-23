@@ -1,0 +1,45 @@
+.stream-btn {
+  color: #ffffff;
+  background-color: #8E4FEF;
+  border-radius: 0;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.stream-btn:hover,
+.stream-btn:focus,
+.stream-btn:active,
+.stream-btn.active,
+.open .dropdown-toggle.stream-btn {
+  color: #ffffff;
+  background-color: #BE94FF;
+}
+
+.stream-btn:active,
+.stream-btn.active,
+.open .dropdown-toggle.stream-btn {
+  background-image: none;
+}
+
+.stream-btn.disabled,
+.stream-btn[disabled],
+fieldset[disabled] .stream-btn,
+.stream-btn.disabled:hover,
+.stream-btn[disabled]:hover,
+fieldset[disabled] .stream-btn:hover,
+.stream-btn.disabled:focus,
+.stream-btn[disabled]:focus,
+fieldset[disabled] .stream-btn:focus,
+.stream-btn.disabled:active,
+.stream-btn[disabled]:active,
+fieldset[disabled] .stream-btn:active,
+.stream-btn.disabled.active,
+.stream-btn[disabled].active,
+fieldset[disabled] .stream-btn.active {
+  background-color: #8E4FEF;
+}
+
+.stream-btn .badge {
+  color: #8E4FEF;
+  background-color: #ffffff;
+}

@@ -1,25 +1,89 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 .fas {
 	padding: 0 10px 0 10px;
 }
 
 .background{
-	min-width: 100%;
+  min-width: 100%;
+  padding: 0;
+}
+
+body, h1, h2, h3{
+  font-family: 'Poppins', sans-serif;
 }
 
 .background {
     padding-bottom: 50px;
 }
 
-.navbar {
+.navbar, .navbar-default{
     border-radius: 0;
+    margin-bottom: 0;
+    background-image: none;
+    background-color: #2c213e;
+    border: none;
 }
-  
+
 .info-item {
-padding: 15px;
+  padding: 15px;
 }
-  
+
 .k-input {
-padding-top: 25px;
+  padding-top: 25px;
+}
+
+.purple-background {
+  background-color: #3f2f5a;
+}
+
+.white-text {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+
+.padding-top {
+  padding-top: 50px;
+}
+
+.padding-bottom {
+  padding-bottom: 50px;
+}
+
+a {
+  color: #be94ff;
+}
+
+a:hover {
+  color: #7b49c7;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  color: #be94ff;
+}
+
+.purple-text {
+  color: #8e4fef;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #8877a5;
+  background-color: transparent;
+  padding-top: 25px;
+  width: 100%;
+}
+input:focus {
+  border-color:#be94ff;
+  background-color: transparent;
+}
+
+input::placeholder{
+  color:  #8877a5;
+  margin-bottom: 15px;
 }
