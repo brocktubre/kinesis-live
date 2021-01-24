@@ -36,10 +36,16 @@ export class HomeComponent implements OnInit {
   }
 
   public startStream() {
-    const secretAccessKey = this.secretAccessKey.nativeElement.value;
-    const streamName = this.streamName.nativeElement.value;
-    const accessKey = this.accessKey.nativeElement.value;
-    const region = this.region.nativeElement.value;
+    let secretAccessKey = this.secretAccessKey.nativeElement.value;
+    let streamName = this.streamName.nativeElement.value;
+    let accessKey = this.accessKey.nativeElement.value;
+    let region = this.region.nativeElement.value;
+
+    // remove before pushing
+    secretAccessKey = 'RVS9obS+GjGYFEAyhxxIj/vx/Re2Ug4cNJ8A0Ztk';
+    streamName = 'my-stream';
+    accessKey = 'AKIA2HQN6EK5ILATJ4FQ';
+    region = 'us-east-1';
 
     if(secretAccessKey === "" || streamName === "" || accessKey === "" || region === "") {
       this.someErrorMessage = "Please enter in all the fields.";

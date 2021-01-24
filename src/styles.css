@@ -96,3 +96,9 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+
+.spinner {
+  font-size:100px;
+  color: #be94ff;
+  margin-top: 50px;
+}

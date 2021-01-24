@@ -43,3 +43,53 @@ fieldset[disabled] .stream-btn.active {
   color: #8E4FEF;
   background-color: #ffffff;
 }
+
+
+.stream-btn-stop {
+  color: #ffffff;
+  background-color: #F72020;
+  border-color: #69022B;
+  border-radius: 0;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.stream-btn-stop:hover,
+.stream-btn-stop:focus,
+.stream-btn-stop:active,
+.stream-btn-stop.active,
+.open .dropdown-toggle.stream-btn-stop {
+  color: #ffffff;
+  background-color: #6E1313;
+  border-color: #69022B;
+}
+
+.stream-btn-stop:active,
+.stream-btn-stop.active,
+.open .dropdown-toggle.stream-btn-stop {
+  background-image: none;
+}
+
+.stream-btn-stop.disabled,
+.stream-btn-stop[disabled],
+fieldset[disabled] .stream-btn-stop,
+.stream-btn-stop.disabled:hover,
+.stream-btn-stop[disabled]:hover,
+fieldset[disabled] .stream-btn-stop:hover,
+.stream-btn-stop.disabled:focus,
+.stream-btn-stop[disabled]:focus,
+fieldset[disabled] .stream-btn-stop:focus,
+.stream-btn-stop.disabled:active,
+.stream-btn-stop[disabled]:active,
+fieldset[disabled] .stream-btn-stop:active,
+.stream-btn-stop.disabled.active,
+.stream-btn-stop[disabled].active,
+fieldset[disabled] .stream-btn-stop.active {
+  background-color: #F72020;
+  border-color: #69022B;
+}
+
+.stream-btn-stop .badge {
+  color: #F72020;
+  background-color: #ffffff;
+}

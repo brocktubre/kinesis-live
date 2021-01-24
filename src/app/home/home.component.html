@@ -31,7 +31,7 @@
     </div> <!-- End container -->
     <div class="row purple-background">
       <!-- Banner row -->
-      <div class="container col-md-8 col-md-offset-2 padding-top padding-bottom">
+      <div class="container col-md-8 col-md-offset-2 padding-top padding-bottom" id="start-streaming">
         <h1 class="white-text text-center"><strong>Start streaming here.</strong></h1>
         <h1 class="white-text text-center"><strong>Enter the following information</strong></h1>
         <div *ngIf="someError"  class="text-center padding-top">
@@ -52,13 +52,18 @@
         <div *ngIf="!isLoadingData" class="padding-top text-center">
           <button class="btn stream-btn" style="margin-top: 50px;" (click)="startStream()">START STREAMING DATA</button>
         </div>
-        <div *ngIf="isLoadingData" class="text-center" style="margin-top: 20px;">
-          <i class="fas fa-spinner fa-spin" style="font-size:50px"></i>
+        <div *ngIf="isLoadingData" class="text-center">
+          <i class="fas fa-spinner fa-spin spinner"></i>
         </div>
-        <div  *ngIf="isLoadingData" class="row">
-          <button class="btn stream-btn-stop" style="margin-top: 20px;" (click)="stopStream()">STOP STREAMING DATA</button>
+        <div  *ngIf="isLoadingData" class="row padding-top text-center">
+          <button class="btn btn-danger stream-btn-stop" style="margin-top: 20px;" (click)="stopStream()">STOP STREAMING DATA</button>
         </div>
       </div>
+      <div class="container col-md-12 col-sm-12 text-center padding-top padding-bottom">
+        <div *ngIf="isLoadingData">
+            <h3 class="white-text">{{streamingData}}</h3>
+        </div>
+    </div>
     </div>
     <app-footer></app-footer>
   </div> <!-- End container-fluid -->
