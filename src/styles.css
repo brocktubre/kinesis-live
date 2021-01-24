@@ -102,3 +102,10 @@ html {
   color: #be94ff;
   margin-top: 50px;
 }
+
+.padding-right {
+  padding-right: 30px;
+}
+.padding-left {
+  padding-left: 30px;
+}
