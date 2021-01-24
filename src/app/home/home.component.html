@@ -4,20 +4,29 @@
       <!-- Banner row -->
       <div class="container col-md-4 col-md-offset-4 white-text padding-top padding-bottom">
         <h1 class="white-text" style="letter-spacing: 8px;"><strong>KINESIS.LIVE</strong></h1>
-        <p> This is a simple Angular application that allows your to interact with Kinesis Data Streams and Kinesis Data Firehose. Feel free to visit the <a href="https://github.com/brocktubre/kinesis-live">Github repository</a> for the code used in this web applicaiton.</p>
+        <p> This is a simple Angular application that allows your to interact with Amazon Kinesis Data Streams. Feel free to visit the <a href="https://github.com/brocktubre/kinesis-live">Github repository</a> for the code used in this web applicaiton.</p>
       </div>
     </div>
     <div class="container">
       <div class="row text-center padding-top col-md-8 col-md-offset-2">
         <!-- Sample record row -->
         <h1 class="purple-text"><strong>Start streaming data with Kinesis.Live!</strong></h1>
-        <p> Enter in your the following in formation below to start streaming data into your Kinesis Data Stream.</p>
+        <p> Enter in your the following information below to start streaming data into your Amazon Kinesis Data Stream.</p>
+        <br/>
+          <h4 class="text-center">Sample Record</h4>
+          <span class="text-justify">
+              <pre>{{sampleRecord}}</pre>
+          </span>
       </div >
       <div class="row text-center padding-top padding-bottom col-md-8 col-md-offset-2">
         <!-- Sample policy row -->
         <h1 class="purple-text"><strong>Read before you begin.</strong></h1>
         <p> 1. Make sure the stream name you provide actually exists!</p>
         <p> 2. Ensure the role associated with your access key ans secret access key has permission to call the PutRecord policy on the Kinesis Data Stream. See the example policy below.</p>
+        <h4 class="text-center">Sample Policy</h4>
+          <span class="text-justify">
+              <pre>{{samplePolicy}}</pre>
+          </span>
       </div>
       <!-- <app-footer></app-footer> -->
     </div> <!-- End container -->
@@ -30,7 +39,7 @@
           <span class="alert alert-danger col-md-12">{{someErrorMessage}}</span>
         </div>
         <div class="row k-input col-md-12">
-          <input autofocus type="text" value="" placeholder="Kinesis Stream Name" #streamName />
+          <input type="text" value="" placeholder="Kinesis Stream Name" #streamName />
         </div>
         <div class="row k-input col-md-12">
           <input type="text" value="" placeholder="AWS Region" #region />

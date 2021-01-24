@@ -43,7 +43,6 @@ export class HomeService {
 
     kds.putRecord(params, function(err, data) {
       if (err) {
-        debugger;
         sendResult.error(err);
       }else {
         sendResult.next(payload);
