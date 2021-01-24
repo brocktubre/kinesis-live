@@ -92,3 +92,7 @@ a:hover {
 .donate {
   max-width: 150px;
 }
+
+html {
+  scroll-behavior: smooth;
+}

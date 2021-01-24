@@ -247,3 +247,8 @@
 .bottom > a > i {
   padding-right: 20px;
 }
+
+.bottom > a:active {
+  background-color: #be94ff;
+}
+
