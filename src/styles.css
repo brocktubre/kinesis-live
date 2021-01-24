@@ -70,7 +70,7 @@ a:hover {
   color: #8e4fef;
 }
 
-input {
+.stream-input{
   outline: 0;
   border-width: 0 0 2px;
   border-color: #8877a5;
@@ -79,12 +79,16 @@ input {
   width: 100%;
   color: white;
 }
-input:focus {
+.stream-input:focus {
   border-color:#be94ff;
   background-color: transparent;
 }
 
-input::placeholder{
+.stream-input::placeholder{
   color:  #8877a5;
   margin-bottom: 15px;
+}
+
+.donate {
+  max-width: 150px;
 }

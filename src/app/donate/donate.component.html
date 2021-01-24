@@ -1,20 +1,22 @@
 <app-navbar></app-navbar>
   <!-- Content for the main page -->
   <div class="container-fluid background">
-    <div class="row text-center purple-background">
+    <div class="text-center purple-background">
       <!-- Banner row -->
-      <div class="container col-md-4 col-md-offset-4 white-text padding-top padding-bottom">
-        <h1 class="white-text" style="letter-spacing: 8px;"><strong>How can I donate?</strong></h1>
-        <p>You can donate using our secure PayPal donation button below. Any donations will most like go towards a cold beer so let me know what beer I should try and I'll have a beer on you!</p>
-        <div class="col-md-4 col-md-offset-4">
-          <form action="https://www.paypal.com/donate" method="post" target="_top">
-            <input type="hidden" name="business" value="KWTWTVGAFY2C6" />
-            <input type="hidden" name="item_name" value="Kinesis Live" />
-            <input type="hidden" name="currency_code" value="USD" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-          </form>
-        </div>
+      <div class="container">
+          <div class="row col-md-8 col-md-offset-2 white-text padding-top">
+            <h1 class="white-text" style="letter-spacing: 8px;"><strong>How can I donate?</strong></h1>
+            <p>You can donate using our secure PayPal donation button below. Any donations will most like go towards a cold beer so let me know what beer I should try and I'll have a beer on you!</p>
+          </div>
+          <div class="row col-md-7 col-md-offset-5 col-sm-7 col-sm-offset-5 col-xs-8 col-xs-offset-4 text-center padding-bottom padding-top">
+            <form action="https://www.paypal.com/donate" method="post" target="_top" class="donate">
+              <input type="hidden" name="business" value="KWTWTVGAFY2C6" />
+              <input type="hidden" name="item_name" value="Kinesis Live" />
+              <input type="hidden" name="currency_code" value="USD" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+          </div>
       </div>
     </div>
     <div class="container">
@@ -23,7 +25,7 @@
           <h1 class="purple-text"><strong>Why would you donate?</strong></h1>
           <p>I honestly have no idea why you would donate, but if you love using this app to stream data into Kinesis then share the love.</p>
         </div>
-    <!-- <app-footer></app-footer> -->
+    <app-footer></app-footer>
     </div>
 </div>
 <app-footer-tail></app-footer-tail>

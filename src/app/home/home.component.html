@@ -28,7 +28,6 @@
               <pre>{{samplePolicy}}</pre>
           </span>
       </div>
-      <!-- <app-footer></app-footer> -->
     </div> <!-- End container -->
     <div class="row purple-background">
       <!-- Banner row -->
@@ -39,16 +38,16 @@
           <span class="alert alert-danger col-md-12">{{someErrorMessage}}</span>
         </div>
         <div class="row k-input col-md-12">
-          <input type="text" value="" placeholder="Kinesis Stream Name" #streamName />
+          <input class="stream-input" type="text" value="" placeholder="Kinesis Stream Name" #streamName />
         </div>
         <div class="row k-input col-md-12">
-          <input type="text" value="" placeholder="AWS Region" #region />
+          <input class="stream-input" type="text" value="" placeholder="AWS Region" #region />
         </div>
         <div class="row k-input col-md-12">
-          <input type="text" value="" placeholder="Access Key" #accessKey />
+          <input class="stream-input" type="text" value="" placeholder="Access Key" #accessKey />
         </div>
         <div class="row k-input col-md-12">
-          <input type="text" value="" placeholder="Secret Access Key" #secretAccessKey />
+          <input class="stream-input" type="text" value="" placeholder="Secret Access Key" #secretAccessKey />
         </div>
         <div *ngIf="!isLoadingData" class="padding-top text-center">
           <button class="btn stream-btn" style="margin-top: 50px;" (click)="startStream()">START STREAMING DATA</button>
@@ -61,6 +60,7 @@
         </div>
       </div>
     </div>
+    <app-footer></app-footer>
   </div> <!-- End container-fluid -->
 <app-footer-tail></app-footer-tail>
 <span id="footer-content"></span>

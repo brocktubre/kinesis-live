@@ -48,17 +48,20 @@ export class HomeComponent implements OnInit {
     }
 
     this.loadingSub = interval(1000).subscribe(x => {
-        this.homeService.streamData(region, secretAccessKey, accessKey, streamName)
-        .subscribe( payload => {
-          this.isLoadingData = true;
-          this.streamingData = payload;
-      }, error => {
-          this.isLoadingData = false;
-          this.someError = true;
-          this.someErrorMessage = error;
-          this.loadingSub.unsubscribe();
-      });
+      this.homeService.streamData(region, secretAccessKey, accessKey, streamName)
+      .subscribe( payload => {
+        this.isLoadingData = true;
+        this.streamingData = payload;
+    }, error => {
+        this.isLoadingData = false;
+        this.someError = true;
+        this.someErrorMessage = error;
+        if(this.someErrorMessage == 'NetworkingError: Network Failure') {
+          this.someErrorMessage = 'NetworkingError: Stream name and region combination is invalid.'
+        }
+        this.loadingSub.unsubscribe();
     });
+  });
   }
 
   public stopStream() {
